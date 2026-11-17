@@ -2,7 +2,7 @@
  * Service Worker — ทำให้ติดตั้งแอปลงมือถือได้ (PWA) และเปิดได้แม้ไม่มีอินเทอร์เน็ต
  * แก้ไฟล์ในแอปแล้วให้เพิ่มเลข VERSION เพื่อให้เครื่องผู้ใช้โหลดไฟล์ใหม่
  */
-const VERSION = "spm-dorm-v86";
+const VERSION = "spm-dorm-v87";
 const SHELL = [
   "./", "index.html", "manifest.json", "assets/css/app.css",
   "assets/fonts/fonts.css", "assets/fonts/inter-latin.woff2", "assets/fonts/noto-sans-thai-thai.woff2", "assets/fonts/noto-sans-thai-latin.woff2",
