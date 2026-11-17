@@ -1687,7 +1687,8 @@
       if (!b) return;
       const r = Object.assign({ deviceName: h.name }, b, { device: b.device || h.id });
       const act = btn.dataset.act;
-      if (act === "view") showSlip(r.device, r.cycle, r.device === SPM.deviceId() ? Object.assign({}, r, S.bills[r.cycle]) : r);
+      // ข้อมูลจาก Sheets (r) ทับบิลที่เก็บในเครื่อง — ในเครื่องอาจยังเป็นสถานะเก่า (เช่น EasySlip อนุมัติไปแล้วแต่ในเครื่องยัง "ยังไม่จ่าย")
+      if (act === "view") showSlip(r.device, r.cycle, r.device === SPM.deviceId() ? Object.assign({}, S.bills[r.cycle], r) : r);
       else if (act === "confirm") confirmDialog([r]);
       else if (act === "reject") rejectDialog(r);
       else if (act === "edit") editDialog(r);
@@ -1723,7 +1724,7 @@
       const r = (k[0] === "p" ? pay.pending : pay.recent)[+k.slice(1)];
       if (!r) return;
       const act = btn.dataset.act;
-      if (act === "view") showSlip(r.device, r.cycle, r.device === SPM.deviceId() ? Object.assign({}, r, S.bills[r.cycle]) : r);
+      if (act === "view") showSlip(r.device, r.cycle, r.device === SPM.deviceId() ? Object.assign({}, S.bills[r.cycle], r) : r);
       else if (act === "confirm") confirmDialog([r]);
       else if (act === "reject") rejectDialog(r);
       else if (act === "edit") editDialog(r);
