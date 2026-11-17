@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1600 1000" preserveAspectRatio="xMidYMid slice">
+  <!-- พื้นหลังแผ่นหินดำแตกเป็นเหลี่ยม มีขอบสะท้อนแสง (ไม่ต้องใช้ไฟล์รูป) -->
+  <defs>
+    <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#34373e"/><stop offset="1" stop-color="#101114"/></linearGradient>
+    <linearGradient id="g2" x1="1" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2a2d33"/><stop offset="1" stop-color="#0c0d10"/></linearGradient>
+    <linearGradient id="g3" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#3a3d44"/><stop offset="1" stop-color="#141519"/></linearGradient>
+    <linearGradient id="g4" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1e2025"/><stop offset="1" stop-color="#08090b"/></linearGradient>
+    <linearGradient id="g5" x1="1" y1="1" x2="0" y2="0"><stop offset="0" stop-color="#303339"/><stop offset="1" stop-color="#0e0f12"/></linearGradient>
+    <linearGradient id="g6" x1="0" y1="0" x2="1" y2=".4"><stop offset="0" stop-color="#4a4d55"/><stop offset="1" stop-color="#18191d"/></linearGradient>
+    <linearGradient id="edge" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="1600" y2="1000">
+      <stop offset="0" stop-color="#fff" stop-opacity=".55"/><stop offset=".55" stop-color="#fff" stop-opacity=".18"/><stop offset="1" stop-color="#fff" stop-opacity=".06"/>
+    </linearGradient>
+    <radialGradient id="light" cx=".18" cy="0" r=".9"><stop offset="0" stop-color="#fff" stop-opacity=".16"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></radialGradient>
+    <radialGradient id="glow" cx="1" cy="1" r=".7"><stop offset="0" stop-color="#ff5a36" stop-opacity=".14"/><stop offset="1" stop-color="#ff5a36" stop-opacity="0"/></radialGradient>
+    <radialGradient id="vig" cx=".5" cy=".5" r=".75"><stop offset=".55" stop-color="#000" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity=".55"/></radialGradient>
+    <g id="shards">
+      <polygon points="0,0 380,0 260,180 0,260" fill="url(#g6)"/>
+      <polygon points="380,0 720,0 860,140 560,300 260,180" fill="url(#g2)"/>
+      <polygon points="720,0 1050,0 860,140" fill="url(#g5)"/>
+      <polygon points="1050,0 1350,0 1450,160 1180,260 860,140" fill="url(#g1)"/>
+      <polygon points="1350,0 1600,0 1600,330 1450,160" fill="url(#g3)"/>
+      <polygon points="0,260 260,180 560,300 330,480 0,560" fill="url(#g4)"/>
+      <polygon points="560,300 330,480 640,620" fill="url(#g5)"/>
+      <polygon points="560,300 860,140 1180,260 980,470 640,620" fill="url(#g6)"/>
+      <polygon points="1180,260 1450,160 1600,330 1600,640 1260,600 980,470" fill="url(#g2)"/>
+      <polygon points="0,560 330,480 220,800 0,1000" fill="url(#g3)"/>
+      <polygon points="330,480 640,620 820,830 520,1000 220,800" fill="url(#g1)"/>
+      <polygon points="640,620 980,470 1260,600 820,830" fill="url(#g5)"/>
+      <polygon points="1260,600 1600,640 1600,1000 1400,880" fill="url(#g6)"/>
+      <polygon points="820,830 1260,600 1400,880 1100,1000" fill="url(#g4)"/>
+      <polygon points="220,800 520,1000 0,1000" fill="url(#g2)"/>
+      <polygon points="820,830 1100,1000 520,1000" fill="url(#g3)"/>
+      <polygon points="1400,880 1600,1000 1100,1000" fill="url(#g1)"/>
+    </g>
+  </defs>
+  <rect width="1600" height="1000" fill="#050506"/>
+  <use xlink:href="#shards" href="#shards" stroke="#030304" stroke-width="7" stroke-linejoin="round"/>
+  <use xlink:href="#shards" href="#shards" fill-opacity="0" stroke="url(#edge)" stroke-width="1.4" stroke-linejoin="round"/>
+  <rect width="1600" height="1000" fill="url(#light)"/>
+  <rect width="1600" height="1000" fill="url(#glow)"/>
+  <rect width="1600" height="1000" fill="url(#vig)"/>
+</svg>
